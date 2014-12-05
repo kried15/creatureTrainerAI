@@ -13,6 +13,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+
 using namespace std;
 
 class Trainer {
@@ -21,11 +22,11 @@ public:
      * Requires: Nothing.
      * Modifies: Nothing.
      * Effects:  returns 'a' or 's#' given the situation.
-                 This is where the bulk of your code will go. The implementation
-                 of your AI goes here.
+     This is where the bulk of your code will go. The implementation
+     of your AI goes here.
      */
     string makeMove(stringstream& situation);
-
+    
     /**
      * Requires: Nothing.
      * Modifies: Nothing.
@@ -43,8 +44,15 @@ public:
     
 private:
     // vvvvvv Your changes to Trainer.h go between this line…
-    
-    
+
+    void learner (stringstream& situation);
+    void addInfotoPokedex (stringstream& situation);
+    string decideMove ();
+    string previousMove;
+    int myActiveCreature;
+    int battleNumber;
+    bool sharedPokemon; 
+    int numRepeats;
     
     
     
